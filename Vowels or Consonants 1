@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        char a=sc.next().charAt(0);
+       
+   if (Character.isLetter(a)){
+       char b = Character.toLowerCase(a);
+    if(b=='a' || b=='e' || b=='i' || b=='o' || b=='u'){
+        System.out.println("The Character " + a + " is Vowel");
+    }else{
+        System.out.println("The Character " + a + " is Consonant");
+    }
+    }else{
+        System.out.println("Invalid Input");
+       }
+    }
+}
