@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main{
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int N=sc.nextInt(),sum=0;
+        if(N>=100){
+        while(N>0){
+            int rem=N%10;
+            sum+=rem;
+            N/=10;
+            }
+        System.out.println("Sum of digit is "+ sum);
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+    }
+}
