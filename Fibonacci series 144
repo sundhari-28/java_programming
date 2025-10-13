@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner A=new Scanner(System.in);
+        int N=A.nextInt();
+        int M=A.nextInt(),fib=0,f=0,s=1;
+        float sum=0f;
+        if(N>=1&&M<=20){
+            for(int i=1;i<=M;i++){
+            if(i==1){
+                fib=0;
+            }
+            else if(i==2){
+                fib=1;
+            }
+            else{
+                fib=f+s;
+                f=s;
+                s=fib;
+            }
+            if(i>=N){
+                sum=sum+fib;
+            }
+        }
+            System.out.printf("The Sum of Fibonacci value is %.1f",sum);
+        }
+        else{
+            System.out.print("Invalid Input");
+        }
+           
+    }
+}
