@@ -1,23 +1,19 @@
 import java.util.*;
-
 public class Main {
-    static int countDigits(int n) {
+    static int count(int n) {
         if (n < 0)
             n = -n;
         if (n == 0)
             return 0;
         else
-            return 1 + countDigits(n / 10);
+            return 1 + count(n / 10);
     }
-
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-
         if (num == 0)
-            System.out.println("The Count the digits: 1");
+            System.out.println("The Count the digits: ");
         else
-            System.out.println("The Count the digits: " + countDigits(num));
-
+            System.out.println("The Count the digits: " + count(num));
     }
 }
